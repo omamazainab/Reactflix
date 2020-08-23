@@ -1,10 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import Auth0ProviderWithHistory from './auth0-provider-with-history'
+
 import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-    <App />,
+  <React.StrictMode>
+
+    <Auth0ProviderWithHistory>
+      <App />
+    </Auth0ProviderWithHistory>
+
+  </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,7 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import { Auth0Provider } from "@auth0/auth0-react";
-import { BrowserRouter } from "react-router-dom";
 
 const Auth0ProviderWithHistory = ({ children }) => {
     const domain = process.env.REACT_APP_AUTH0_DOMAIN;
@@ -14,7 +13,7 @@ const Auth0ProviderWithHistory = ({ children }) => {
     };
 
     return (
-        <BrowserRouter>
+       
             <Auth0Provider
                 domain={domain}
                 clientId={clientId}
@@ -23,7 +22,7 @@ const Auth0ProviderWithHistory = ({ children }) => {
             >
                 {children}
             </Auth0Provider>
-        </BrowserRouter>
+        
 
     );
 };

@@ -6,7 +6,7 @@ const LoginButton = () => {
   const { loginWithRedirect } = useAuth0();
   return (
     <button
-      onClick={() => loginWithRedirect()}
+      onClick={() => loginWithRedirect()}  //redirects to the Auth0 /authorize endpoint to carry out the authentication process
    
       className="btn-margin"
     >

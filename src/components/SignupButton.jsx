@@ -1,21 +1,22 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
-import { Button } from "react-bootstrap";
 
 const SignupButton = () => {
   const { loginWithRedirect } = useAuth0();
   return (
-    <Button
+    
+    <button
+      type="button"
+      className="btn btn-primary signup-btn"
       onClick={() =>
         loginWithRedirect({
           screen_hint: "signup",
         })
       }
-      variant="primary"
-      className="btn-margin"
     >
       Sign Up
-    </Button>
+    </button>
+
   );
 };
 

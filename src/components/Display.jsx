@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { CloudinaryContext /*, Transformation*/, Video } from 'cloudinary-react';
+import { CloudinaryContext, Video} from 'cloudinary-react';
+import { Share } from 'react-twitter-widgets'
+
 
 const Display = () => {
 
@@ -22,18 +24,26 @@ const Display = () => {
 
   return (
     <CloudinaryContext cloudName="omama">
-      <h2 className="text-center">Check out our latest videos</h2>
+      <h2 className="display-heading text-center my-5">Check out our latest videos</h2>
       <div className="container row mx-auto">
-      {
-        videos.map(video => {
-          return (
-            <div className="col-md-4">
-              <Video publicId={video.public_id} width="300" height="300" controls></Video>
+        {
+          videos.map(video => {
+            return (
+              <div className="col-md-6 col-lg-4 text-center" key={video.public_id}>
+                <Video publicId={video.public_id} width="300" height="300" controls>
+              </Video>
+                  <div>
+                    <p>Created at {video.created_at}</p>
+                  </div>
+                  <div>
+
+                    <Share url={`https://res.cloudinary.com/omama/video/upload/v1/${video.public_id.replace(/\s/g, '%20')}.webm`}></Share>
+                  </div>
             </div>
           )
         })
       }
-      </div>
+              </div>
       
     </CloudinaryContext>
   )

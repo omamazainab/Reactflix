@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 import Nav from './components/Nav'
-import Upload from './components/Upload'
+// import Upload from './components/Upload'
 import Display from './components/Display'
 
 import { useAuth0 } from "@auth0/auth0-react";

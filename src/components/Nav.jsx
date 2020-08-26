@@ -9,7 +9,6 @@ import Upload from './Upload'
 
 
 import {
-  BrowserRouter as Router,
   Routes,
   Route,
   Link

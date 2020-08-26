@@ -7,8 +7,10 @@ const Upload = () => {
 
   let myWidget = window.cloudinary.createUploadWidget({
     cloudName: 'omama',
-    uploadPreset: 'wjumhxyv'
+    uploadPreset: 'wjumhxyv',
+    tags: ['videos']
   }, (error, result) => {
+   
     if (!error && result && result.event === "success") {
       console.log('Done! Here is the image info: ', result.info);
     }
@@ -16,13 +18,12 @@ const Upload = () => {
   )
 
 
-
   return (
     <CloudinaryContext cloudName="omama">
       <div>
         <button 
           id="upload_widget" 
-          class="cloudinary-button"
+          className="cloudinary-button"
           onClick={
             function () {
                 myWidget.open();
@@ -31,6 +32,8 @@ const Upload = () => {
         >
           Upload files
         </button>
+
+                               
       </div>
     </CloudinaryContext>
 

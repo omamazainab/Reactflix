@@ -20,7 +20,7 @@ const Upload = () => {
 
   return (
     <CloudinaryContext cloudName="omama">
-      <div>
+      <div className="my-5 mx-auto">
         <button 
           id="upload_widget" 
           className="cloudinary-button"

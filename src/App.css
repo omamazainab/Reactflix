@@ -24,6 +24,12 @@
     font-family: sans-serif;
 }
 
+.footer, .footer>a{
+    color: white;
+    background-color: red;
+}
+
+
 @media (max-width: 768px) { 
     .btn{
         display: block;

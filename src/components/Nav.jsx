@@ -34,12 +34,12 @@ const Nav = () => {
             <ul className="navbar-nav ml-auto ">
 
             <li className="nav-item">
-                <Link  to="/" className="Link">Home</Link>
+                <Link  to="/" className="nav-link">Home</Link>
             </li> 
 
             {isAuthenticated ? 
             <li className="nav-item">
-                <Link  to="/upload" className="Link">Upload</Link>
+                <Link  to="/upload" className="nav-link">Upload</Link>
             </li> :
             ''
           }
@@ -55,7 +55,9 @@ const Nav = () => {
 
         <Routes>
                 <Route path="/" element={<Display></Display>} />
+                {isAuthenticated ? 
                 <Route path="/upload" element={<Upload></Upload>} />
+                :''}
         </Routes>
     
 

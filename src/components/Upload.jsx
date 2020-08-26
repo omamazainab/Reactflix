@@ -20,17 +20,17 @@ const Upload = () => {
 
   return (
     <CloudinaryContext cloudName="omama">
-      <div className="my-5 mx-auto">
+      <div className="my-5 text-center">
         <button 
           id="upload_widget" 
-          className="cloudinary-button"
+          className="upload-button"
           onClick={
             function () {
                 myWidget.open();
               }
           }
         >
-          Upload files
+          Upload Videos
         </button>
 
                                

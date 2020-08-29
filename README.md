@@ -7,3 +7,14 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 you must have these things installed 
 Node.js
+
+#### for serving install 
+yarn add serve
+and from package.json change "start": "serve -s build",
+
+### contents
+1) Flesh Out The App
+2. Set up Authentication & Views
+3. Upload Videos
+4. Display Videos
+5. Share on Twitter

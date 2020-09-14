@@ -13,7 +13,7 @@ yarn add serve
 and from package.json change "start": "serve -s build",
 
 ### contents
-1) Flesh Out The App
+1. Flesh Out The App
 2. Set up Authentication & Views
 3. Upload Videos
 4. Display Videos
